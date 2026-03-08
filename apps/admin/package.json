@@ -7,8 +7,8 @@
   },
   "scripts": {
     "dev": "next dev -p 4000",
-    "build": "next build",
-    "start": "next start -p 4000"
+    "build": "next build && node scripts/prepare-hostinger-build.mjs",
+    "start": "node .next/server.js"
   },
   "dependencies": {
     "@supabase/supabase-js": "^2.49.4",
