@@ -5,6 +5,9 @@ const root = process.cwd();
 const nextDir = path.join(root, '.next');
 const standaloneDir = path.join(nextDir, 'standalone');
 const tempDir = path.join(root, '.hostinger-next-build');
+const repoRoot = path.resolve(root, '..', '..');
+const repoOutputDir = path.join(repoRoot, '.next');
+const repoTempDir = path.join(repoRoot, '.hostinger-next-build');
 const publicDir = path.join(root, 'public');
 
 function removeDir(target) {
@@ -36,4 +39,10 @@ copyDir(publicDir, path.join(tempDir, 'public'));
 removeDir(nextDir);
 fs.renameSync(tempDir, nextDir);
 
-console.log('Build preparado para Hostinger en .next');
+removeDir(repoTempDir);
+ensureDir(repoTempDir);
+copyDir(nextDir, repoTempDir);
+removeDir(repoOutputDir);
+fs.renameSync(repoTempDir, repoOutputDir);
+
+console.log('Build preparado para Hostinger en apps/admin/.next y en /.next');
