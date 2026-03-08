@@ -1,0 +1,16 @@
+{
+  "name": "social-plans-api",
+  "version": "0.1.0",
+  "private": true,
+  "type": "commonjs",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.21.2",
+    "pg": "^8.12.0",
+    "socket.io": "^4.8.1"
+  }
+}
+

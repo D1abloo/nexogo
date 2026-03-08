@@ -1,0 +1,34 @@
+# Node / Next
+node_modules/
+.next/
+out/
+dist/
+.expo/
+
+# Env
+.env
+.env.*
+!.env.production.example
+
+# Logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# Local deploy artifacts
+.deploy/
+
+# System / editor
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
+
+# Python / misc cache
+__pycache__/
+*.pyc
+
+# Coverage
+coverage/
